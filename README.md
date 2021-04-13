@@ -16,12 +16,12 @@
     Принимает POST-запросы. На вход принимает файл вида:
 
     <root>
-    <locations>
-    <location id="" name="" lat="" lng="" />
-    </locations>
-    <distances>
-    <distance id="" name="" lat="" lng="" />
-    </distances>
+        <locations>
+            <location id="" name="" lat="" lng="" />
+        </locations>
+        <distances>
+            <distance id="" name="" lat="" lng="" />
+        </distances>
     </root>
 
 В каталоге src/main/resources находятся два zip-файла c образцами входных xml-файлов. Один из них содержит миллион предварительно расчитанных расстояний для загрузки в БД.
