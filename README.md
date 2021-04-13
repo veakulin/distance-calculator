@@ -1,5 +1,5 @@
 # distance-calculator
-Тестовый проект на позицию Junior Java Developer (см. задание внизу)
+<h4>Тестовый проект на позицию Junior Java Developer (см. задание внизу)</h4>
 
 Проект реализован с использованием:
 - Spring Boot + Tomcat
