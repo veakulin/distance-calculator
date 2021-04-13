@@ -62,7 +62,7 @@
 - В проекте в папке docs документация (при необходимости), в папке liquibase Liquibase и миграции к нему.
 - Проект собирается Maven.
 - Для тестового задания предполагается логин/пароль MySQL root/root, имя базы данных distance-calculator.
-- Data source в WildFly java:/magenta/datasource/test-distance-calculator .
+- Data source в WildFly java:/company/datasource/test-distance-calculator .
 
 Overview
 
