@@ -83,21 +83,21 @@ Application should make it possible to calculate the distance in two ways:
 - Lookup distance between two cities via “distance matrix” (distance table in the database)
 
 API has 3 endpoints:
-    - List of all cities in the DB. Fields:
-        - ID
-        - Name
-    - Calculate distance:
-        - Input:
-            - Calculation Type: <Crowflight, Distance Matrix, All>
-            - From City: <List of cities>
-            - To City: <List of Cities>
-        - Output:
-        - Results: all distance calculation results as requested
-    - Upload data to the DB. Uploads XML file with cities and distances into the application. Application parses it and stores it into the database.
-        - Input:
-            - Multipart/form-data form submission with single “File” input.
-        - Output:
-            - HTTP response code 200 without body
+- List of all cities in the DB. Fields:
+    - ID
+    - Name
+- Calculate distance:
+    - Input:
+        - Calculation Type: <Crowflight, Distance Matrix, All>
+        - From City: <List of cities>
+        - To City: <List of Cities>
+    - Output:
+    - Results: all distance calculation results as requested
+- Upload data to the DB. Uploads XML file with cities and distances into the application. Application parses it and stores it into the database.
+    - Input:
+        - Multipart/form-data form submission with single “File” input.
+    - Output:
+        - HTTP response code 200 without body
 
 Tools/Libraries
 - IDEA Community Edition
