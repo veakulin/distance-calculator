@@ -20,7 +20,7 @@
             <location id="" name="" lat="" lng="" />
         </locations>
         <distances>
-            <distance id="" name="" lat="" lng="" />
+            <distance from="" to="" dist="" />
         </distances>
     </root>
 
