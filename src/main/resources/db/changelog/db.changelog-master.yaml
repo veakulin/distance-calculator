@@ -1,0 +1,103 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1617599553750-1
+      author: v (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: latitude
+                  type: DOUBLE
+              - column:
+                  constraints:
+                    nullable: false
+                  name: longitude
+                  type: DOUBLE
+            tableName: city
+  - changeSet:
+      id: 1617599553750-2
+      author: v (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: fromId
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: toId
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: distance
+                  type: DOUBLE
+            tableName: distance
+  - changeSet:
+      id: 1617599553750-3
+      author: v (generated)
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: fromId
+            indexName: ix_fromId
+            tableName: distance
+  - changeSet:
+      id: 1617599553750-4
+      author: v (generated)
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: toId
+            indexName: ix_toId
+            tableName: distance
+  - changeSet:
+      id: 1617599553750-5
+      author: v (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: fromId
+            baseTableName: distance
+            constraintName: fk_fromId
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: CASCADE
+            onUpdate: CASCADE
+            referencedColumnNames: id
+            referencedTableName: city
+            validate: true
+  - changeSet:
+      id: 1617599553750-6
+      author: v (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: toId
+            baseTableName: distance
+            constraintName: fk_toId
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: CASCADE
+            onUpdate: CASCADE
+            referencedColumnNames: id
+            referencedTableName: city
+            validate: true
