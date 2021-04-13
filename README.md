@@ -19,7 +19,6 @@
 /upload<br/>
     Принимает POST-запросы. На вход принимает файл вида:<br/>
         ```html
-        <pre>
         <root>
             <locations>
                 <location id="" name="" lat="" lng="" />
@@ -28,8 +27,7 @@
                 <distance id="" name="" lat="" lng="" />
             </distances>
         </root>
-        </pre>
-        ```html
+        ```html<br/>
     В каталоге src/main/resources находятся два zip-файла c образцами входных xml-файлов. Один из них содержит миллион предварительно расчитанных расстояний для загрузки в БД.
 
 /eval
