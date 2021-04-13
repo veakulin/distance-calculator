@@ -1,35 +1,30 @@
-# distance-calculator
-<h2>Тестовый проект на позицию Junior Java Developer (см. задание внизу)</h2>
+# Тестовый проект на позицию Junior Java Developer (см. задание внизу)
 
-<p>
 Проект реализован с использованием:<br/>
-- Spring Boot + Tomcat<br/>
-- Spring Data<br/>
-- JDBC (т.к. на больших загрузках Spring Data ощутимо медленнее)<br/>
-- Liquibase<br/>
-- MySQL<br/>
-</p>
+- Spring Boot + Tomcat
+- Spring Data
+- JDBC (т.к. на больших загрузках Spring Data ощутимо медленнее)
+- Liquibase
+- MySQL
 
-<p>
 В приложении реализовано три конечных точки:
 
-/city<br/>
-    Отвечает на GET-запросы. Возвращает список элементов вида {"id":"ид_города", "name":"название_города"}<br/>
+/city  
+    Отвечает на GET-запросы. Возвращает список элементов вида {"id":"ид_города", "name":"название_города"}
 
-/upload<br/>
-    Принимает POST-запросы. На вход принимает файл вида:<br/>
-        ```
-            <root>
-                <locations>
-                    <location id="" name="" lat="" lng="" />
-                </locations>
-                <distances>
-                    <distance id="" name="" lat="" lng="" />
-                </distances>
-            </root>
-        ```
-        <br/>
-    В каталоге src/main/resources находятся два zip-файла c образцами входных xml-файлов. Один из них содержит миллион предварительно расчитанных расстояний для загрузки в БД.
+/upload  
+    Принимает POST-запросы. На вход принимает файл вида:
+
+    <root>
+    <locations>
+    <location id="" name="" lat="" lng="" />
+    </locations>
+    <distances>
+    <distance id="" name="" lat="" lng="" />
+    </distances>
+    </root>
+
+В каталоге src/main/resources находятся два zip-файла c образцами входных xml-файлов. Один из них содержит миллион предварительно расчитанных расстояний для загрузки в БД.
 
 /eval
     Отвечает на POST-запросы. На вход принимает тело запроса вида:
